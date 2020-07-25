@@ -1,0 +1,17 @@
+<div class="container">
+
+  <form>
+    <div class="form-group">
+      <label for="nomeInput">Nome</label>
+      <input #nomeInput type="text" class="form-control" id="nomeInput" placeholder="Digite um nome">
+    </div>
+  </form>
+
+  <label for="valorInput">Valor</label>
+  <input #valorInput type="text" class="form-control mb-3" id="valorInput" placeholder="Digite um valor" [(ngModel)]="valor">
+
+  <button type="button" class="btn btn-primary btn-block"
+  (click)="alterarValor(valorInput.value)">Adicionar</button>
+
+  <div class="alert alert-primary mt-3 p-3" [hidden]="!exibirCaixa"></div>
+</div>
